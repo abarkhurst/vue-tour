@@ -1,21 +1,21 @@
 <template>
   <div class="v-tour">
-    <slot
-      :current-step="currentStep"
-      :steps="steps"
-      :previous-step="previousStep"
-      :next-step="nextStep"
-      :stop="stop"
-      :skip="skip"
-      :finish="finish"
-      :is-first="isFirst"
-      :is-last="isLast"
-      :labels="customOptions.labels"
-      :enabled-buttons="customOptions.enabledButtons"
-      :highlight="customOptions.highlight"
-      :debug="customOptions.debug"
-    >
-      <transition name="fade">
+    <transition name="fade">
+      <slot
+        :current-step="currentStep"
+        :steps="steps"
+        :previous-step="previousStep"
+        :next-step="nextStep"
+        :stop="stop"
+        :skip="skip"
+        :finish="finish"
+        :is-first="isFirst"
+        :is-last="isLast"
+        :labels="customOptions.labels"
+        :enabled-buttons="customOptions.enabledButtons"
+        :highlight="customOptions.highlight"
+        :debug="customOptions.debug"
+      >
         <!--Default slot {{ currentStep }}-->
         <v-step
           v-if="steps[currentStep]"
@@ -39,8 +39,8 @@
           <a @click="nextStep">Next step</a>
         </div>-->
         </v-step>
-      </transition>
-    </slot>
+      </slot>
+    </transition>
   </div>
 </template>
 
